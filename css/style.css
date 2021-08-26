@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.header {
+    height: 60.4px;
+}
+
+.menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.9);
+    transition: all 0.5s;
+    transform: translateX(-100%);
+    list-style: none;
+}
+
+.menu__li {
+    color: white;
+    text-decoration: none;
+    padding: 16px;
+    border-bottom: 1px solid #fff;
+    display: block;
+    list-style: none;
+    margin: 5px;
+}
+
+#menu-bar:checked ~ .menu {
+      transform: translateX(0%); 
+       z-index: 100;
+}
+
+.icon-bar {
+    font-size: 30px;
+    margin: 9px;
+    padding: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.icon-bar:hover {
+    cursor: pointer;
+}
+
+.menu__li:hover {
+    background: rgba(255, 255, 255,0.4)
+}
+
+input {
+    display: none;
+}
+
+header {
+    background: #000;
+    color: white
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    margin: 8px 8px 8px 50px;
+}
+
+#camisa {
+    position: absolute;
+    margin: 9px;
+    font-size: 30px;
+    padding: 4px;
+}
+
+.img-container {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+
+.section {
+    margin:8.5px;    
+}
+
+.section_txt {
+    margin: 6px;
+    padding: 6px;
+    font-size: 17.6px;
+}
+
+h2 {
+    padding: 1px;
+    margin: 4px 4px 2px 12px;
+}
+
+.section {
+    text-align: center;
+}
+
+.section img {
+    width: 200px;
+    height: 270px;
+    object-fit: cover;
+    flex-wrap: wrap;
+    border: 3.5px solid ;
+    box-shadow: 0.1px 0.1px 7px;
+    border-color: none;
+    margin: 8px;
+}
+
+
+
+.footer {
+    background: #333;
+    color: white;
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer [class*="icon-"] {
+    font-size: 27px;
+    text-decoration: none;
+    color: black;
+    background: white;
+    width: 40px;
+    height: 40px;
+    padding: 6.3px;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+
+@media (min-width:700px) {
+    .menu {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%); 
+        float: right;
+        display: flex;
+    }
+    
+    .menu a {
+        border: none;
+    }
+    
+    .icon-bar {
+        display: none;
+    }
+}

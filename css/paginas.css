@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:sans-serif;
+    background-image: url(../img/banner.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+.header {
+    height: 60px;
+}
+
+.menu {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,1);
+    transition: all 0.5s;
+    transform: translateX(-100%);
+    list-style: none;
+}
+
+.menu__li {
+    color: white;
+    text-decoration: none;
+    padding: 16px;
+    border-bottom: 1px solid #fff;
+    display: block;
+    list-style: none;
+}
+
+#menu-bar:checked ~ .menu {
+      transform: translateX(0%); 
+       z-index: 100;
+}
+
+.icon-bar {
+    font-size: 30px;
+    margin: 9px;
+    padding: 2px;
+    position: relative;
+    display: inline-block;
+}
+
+.icon-bar:hover {
+    cursor: pointer;
+}
+
+.menu__li:hover {
+    background: rgba(255, 255, 255,0.3);
+}
+
+#menu-bar{
+    display: none;
+}
+
+header {
+    background: #000;
+    color: white
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    margin: 8px 8px 8px 50px;
+}
+
+#camisa {
+    position: absolute;
+    margin: 9px;
+    font-size: 30px;
+    padding: 4px;
+}
+
+form {
+    width: 50%;
+    margin: 15px auto auto auto;
+    background: rgba(0,0,0,.8);
+    padding: 16px;
+    margin-top: 30px;
+    border-radius: 5px;
+}
+
+input {
+    outline: none;
+    display: block;
+    width: 98%;
+    margin: 6px;
+    padding: 3px;
+    margin-bottom: 30px;
+    border: 1px solid black;
+    border-radius: 2px
+}
+
+
+h3{
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+#boton {
+    padding: 8px;
+    background: #31384A;
+    color: white;
+    font-size: 20px;
+}
+
+#boton:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 2px #000;
+}
+
+@media (max-width:480px){
+    form{
+        width: 70%;
+        
+    }
+}
+
+@media (min-width:724px) {
+    .menu {
+        position: static;
+        width: auto;
+        height: auto;
+        transform: translateX(0%); 
+        float: right;
+        display: flex;
+    }
+    
+    .menu a {
+        border: none;
+    }
+    
+    .icon-bar {
+        display: none;
+    }
+}
